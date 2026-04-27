@@ -3,7 +3,7 @@ pipeline {
 
     parameters {
         choice choices: ['BR_DEV', 'BR_IT', 'BR_UAT'], description: 'choose mode for Environment ', name: 'Host'
-        choice choices: ['deploy', 'restart'], description: 'choose mode for deployment', name: 'Mode
+        choice choices: ['deploy', 'restart'], description: 'choose mode for deployment', name: 'Mode'
     }
 
     stages {
