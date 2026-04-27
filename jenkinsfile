@@ -1,7 +1,18 @@
 pipeline {
     agent any
-}
-parameters {
-  choice choices: ['Deploy ', 'Restart '], description: 'choose mode for deployment', name: 'Mode'
-  choice choices: ['Deploy ', 'Restart '], description: 'choose mode for deployment', name: 'Mode'
+
+    parameters {
+        choice choices: ['BR_DEV', 'BR_IT', 'BR_UAT'], description: 'choose mode for Environment ', name: 'Host'
+        choice choices: ['deploy', 'restart'], description: 'choose mode for deployment', name: 'Mode
+    }
+
+    stages {
+      stage('test') {
+          steps {
+              script {
+
+              }
+          }
+      }
+    }
 }
