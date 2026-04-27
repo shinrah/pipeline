@@ -1,29 +1,7 @@
 pipeline {
     agent any
-    
-    stages {
-        stage('Build') {
-            steps {
-                echo "Building the application"
-            }
-        }
-        
-        stage('Test') {
-            steps {
-                echo "Running tests"
-            }
-        }
-        
-        stage('Deploy') {
-            steps {
-                echo "Deploying the application"
-            }
-        }
-        
-        stage('Release') {
-            steps {
-                echo "Releasing the application"
-            }
-        }
-    }
+}
+parameters {
+  choice choices: ['Deploy ', 'Restart '], description: 'choose mode for deployment', name: 'Mode'
+  choice choices: ['Deploy ', 'Restart '], description: 'choose mode for deployment', name: 'Mode'
 }
