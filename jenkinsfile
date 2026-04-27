@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { label 'BuildAgent' }
 
     parameters {
         choice choices: ['BR_DEV', 'BR_IT', 'BR_UAT'], description: 'choose mode for Environment ', name: 'Host'
